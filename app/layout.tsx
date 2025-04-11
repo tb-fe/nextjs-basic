@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/styles/globals.css";
+import { env } from "@/env.mjs";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      {!!env.GOOGLE_GA_ID && <GoogleAnalytics gaId={env.GOOGLE_GA_ID} />}
     </html>
   );
 }

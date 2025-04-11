@@ -4,6 +4,7 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     HOST: z.string().min(1),
+    GOOGLE_GA_ID: z.string().optional(),
   },
   client: {
     NEXT_PUBLIC_STATIC_URL: z.string().url(),
@@ -14,5 +15,6 @@ export const env = createEnv({
 
     // server
     HOST: process.env.HOST,
+    GOOGLE_GA_ID: process.env.GOOGLE_GA_ID,
   },
 });
