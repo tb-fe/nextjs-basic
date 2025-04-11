@@ -1,0 +1,8 @@
+services:
+  tb-nextjs-production:
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    image: tb-nextjs-production
+    ports:
+      - "3002:3000"
