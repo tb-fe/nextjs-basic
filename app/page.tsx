@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { TestError } from "@/components/test-error";
 import { createMetadata } from "@/lib/create-metadata";
 
 export const metadata = createMetadata({
@@ -12,7 +13,8 @@ export const metadata = createMetadata({
 export default function Home() {
   return (
     <div>
-      <Button>abc</Button>
+      <h1>首页内容</h1>
+      <TestError />
     </div>
   );
 }
